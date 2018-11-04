@@ -17,8 +17,12 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-#copy py files into image, there is no need for git
+#copy py files into image
 COPY *.py ./
+
+
+#copy csv files into image
+COPY *.csv ./
 
 #copy kaggle json file to root/.kaggle
 
